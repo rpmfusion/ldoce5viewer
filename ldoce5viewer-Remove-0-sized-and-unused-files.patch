@@ -1,0 +1,58 @@
+From 3840ab0a6121e7061c11e5a30b0ebc4dccbdc40e Mon Sep 17 00:00:00 2001
+From: Damian Wrobel <dwrobel@ertelnet.rybnik.pl>
+Date: Tue, 27 Feb 2018 22:09:45 +0100
+Subject: [PATCH] Remove 0-sized and unused files
+
+---
+ ldoce5viewer/static/scripts/activator.js     | 0
+ ldoce5viewer/static/scripts/body.js          | 0
+ ldoce5viewer/static/scripts/collocations.js  | 0
+ ldoce5viewer/static/scripts/common.js        | 0
+ ldoce5viewer/static/scripts/etymologies.js   | 0
+ ldoce5viewer/static/scripts/examples.js      | 0
+ ldoce5viewer/static/scripts/phrases.js       | 0
+ ldoce5viewer/static/scripts/thesaurus.js     | 0
+ ldoce5viewer/static/scripts/word_families.js | 0
+ ldoce5viewer/static/scripts/word_sets.js     | 0
+ 10 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 ldoce5viewer/static/scripts/activator.js
+ delete mode 100644 ldoce5viewer/static/scripts/body.js
+ delete mode 100644 ldoce5viewer/static/scripts/collocations.js
+ delete mode 100644 ldoce5viewer/static/scripts/common.js
+ delete mode 100644 ldoce5viewer/static/scripts/etymologies.js
+ delete mode 100644 ldoce5viewer/static/scripts/examples.js
+ delete mode 100644 ldoce5viewer/static/scripts/phrases.js
+ delete mode 100644 ldoce5viewer/static/scripts/thesaurus.js
+ delete mode 100644 ldoce5viewer/static/scripts/word_families.js
+ delete mode 100644 ldoce5viewer/static/scripts/word_sets.js
+
+diff --git a/ldoce5viewer/static/scripts/activator.js b/ldoce5viewer/static/scripts/activator.js
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/ldoce5viewer/static/scripts/body.js b/ldoce5viewer/static/scripts/body.js
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/ldoce5viewer/static/scripts/collocations.js b/ldoce5viewer/static/scripts/collocations.js
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/ldoce5viewer/static/scripts/common.js b/ldoce5viewer/static/scripts/common.js
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/ldoce5viewer/static/scripts/etymologies.js b/ldoce5viewer/static/scripts/etymologies.js
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/ldoce5viewer/static/scripts/examples.js b/ldoce5viewer/static/scripts/examples.js
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/ldoce5viewer/static/scripts/phrases.js b/ldoce5viewer/static/scripts/phrases.js
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/ldoce5viewer/static/scripts/thesaurus.js b/ldoce5viewer/static/scripts/thesaurus.js
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/ldoce5viewer/static/scripts/word_families.js b/ldoce5viewer/static/scripts/word_families.js
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/ldoce5viewer/static/scripts/word_sets.js b/ldoce5viewer/static/scripts/word_sets.js
+deleted file mode 100644
+index e69de29..0000000
