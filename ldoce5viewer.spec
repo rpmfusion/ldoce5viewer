@@ -4,7 +4,7 @@
 
 Name:           ldoce5viewer
 Version:        0
-Release:        6.%{date}git%{shortcommit0}%{?dist}
+Release:        7.%{date}git%{shortcommit0}%{?dist}
 Summary:        Viewer Application for the Longman Dictionary (LDOCE 5)
 License:        GPLv3+ and Public Domain
 URL:            https://forward-backward.co.jp/ldoce5viewer/
@@ -136,6 +136,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 
 
 %changelog
+* Fri Aug 09 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0-7.20180309git377ff48
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Mon May 06 2019 Damian Wrobel <dwrobel@ertelnet.rybnik.pl> - 0-6.20180309git377ff48
 - Drop patches merged upstream,
 - Switch to used python3 and qt5.
