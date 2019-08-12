@@ -4,7 +4,7 @@
 
 Name:           ldoce5viewer
 Version:        0
-Release:        7.%{date}git%{shortcommit0}%{?dist}
+Release:        8.%{date}git%{shortcommit0}%{?dist}
 Summary:        Viewer Application for the Longman Dictionary (LDOCE 5)
 License:        GPLv3+ and Public Domain
 URL:            https://forward-backward.co.jp/ldoce5viewer/
@@ -21,22 +21,22 @@ BuildArch:      noarch
 BuildRequires:  /usr/bin/git
 BuildRequires:  desktop-file-utils
 BuildRequires:  python3-devel
-BuildRequires:  %{py3_dist whoosh}
-BuildRequires:  %{py3_dist lxml}
+BuildRequires:  python3dist(whoosh)
+BuildRequires:  python3dist(lxml)
 BuildRequires:  python3-qt5-devel
 BuildRequires:  libappstream-glib
 # Required to regenerate icons
 BuildRequires:  ImageMagick
 BuildRequires:  inkscape
-BuildRequires:  %{py3_dist pillow}
+BuildRequires:  python3dist(pillow)
 
-Requires:       gstreamer-python
-Requires:       gstreamer-plugins-good
-Requires:       gstreamer-plugins-ugly
+Requires:       python3-gstreamer1
+Requires:       gstreamer1-plugins-good
+Requires:       gstreamer1-plugins-ugly
 Requires:       hicolor-icon-theme
-Requires:       %{py3_dist whoosh}
-Requires:       %{py3_dist lxml}
 Requires:       python3-qt5-webkit
+Requires:       python3dist(whoosh)
+Requires:       python3dist(lxml)
 
 
 %description
@@ -136,6 +136,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 
 
 %changelog
+* Mon Aug 12 2019 Damian Wrobel <dwrobel@ertelnet.rybnik.pl> - 0-8.20180309git377ff48
+- Drop gstreamer-0.10 dependencies (rfbz#5354).
+
 * Fri Aug 09 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0-7.20180309git377ff48
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
