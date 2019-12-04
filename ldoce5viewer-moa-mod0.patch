@@ -1,0 +1,18 @@
+diff -ru ldoce5viewer-377ff489260ffbdfd9255363dae3e5ed021bf243/ldoce5viewer/qtgui/__init__.py ldoce5viewer-377ff489260ffbdfd9255363dae3e5ed021bf243/ldoce5viewer/qtgui/__init__.py
+--- ldoce5viewer-377ff489260ffbdfd9255363dae3e5ed021bf243/ldoce5viewer/qtgui/__init__.py	2018-03-09 04:31:10.000000000 -0300
++++ ldoce5viewer-377ff489260ffbdfd9255363dae3e5ed021bf243/ldoce5viewer/qtgui/__init__.py	2019-12-03 23:16:36.410360864 -0300
+@@ -7,7 +7,13 @@
+ from .. import __author__
+ 
+ # use PyQt API v2
+-import sip
++try:
++    # new location for sip
++    # https://www.riverbankcomputing.com/static/Docs/PyQt5/incompatibilities.html#pyqt-v5-11
++    from PyQt5 import sip
++except ImportError:
++    import sip
++
+ sip.setapi('QString', 2)
+ sip.setapi('QVariant', 2)
+ 
