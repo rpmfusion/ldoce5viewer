@@ -1,0 +1,23 @@
+From 85690cc4bec3f0c9352d64a2150528724d679386 Mon Sep 17 00:00:00 2001
+From: Damian Wrobel <dwrobel@ertelnet.rybnik.pl>
+Date: Tue, 7 Jan 2020 13:18:42 +0100
+Subject: [PATCH] Fixes "Ldoce5viewer not starting after sip upgrade"
+
+Fix for https://bugzilla.rpmfusion.org/show_bug.cgi?id=5502 as per
+https://www.riverbankcomputing.com/static/Docs/PyQt5/incompatibilities.html#pyqt-v5-11
+---
+ ldoce5viewer/qtgui/__init__.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/ldoce5viewer/qtgui/__init__.py b/ldoce5viewer/qtgui/__init__.py
+index 56fa851..5f2eb78 100644
+--- a/ldoce5viewer/qtgui/__init__.py
++++ b/ldoce5viewer/qtgui/__init__.py
+@@ -7,6 +7,7 @@
+ from .. import __author__
+ 
+ # use PyQt API v2
++from PyQt5 import QtCore
+ import sip
+ sip.setapi('QString', 2)
+ sip.setapi('QVariant', 2)
