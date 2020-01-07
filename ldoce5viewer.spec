@@ -4,7 +4,7 @@
 
 Name:           ldoce5viewer
 Version:        0
-Release:        9.%{date}git%{shortcommit0}%{?dist}
+Release:        10.%{date}git%{shortcommit0}%{?dist}
 Summary:        Viewer Application for the Longman Dictionary (LDOCE 5)
 License:        GPLv3+ and Public Domain
 URL:            https://forward-backward.co.jp/ldoce5viewer/
@@ -15,6 +15,8 @@ Patch0:         https://patch-diff.githubusercontent.com/raw/ciscorn/ldoce5viewe
 # Port to QT5
 # https://github.com/ciscorn/ldoce5viewer/pull/69
 Patch1:         https://patch-diff.githubusercontent.com/raw/ciscorn/ldoce5viewer/pull/69.patch#/%{name}-port-to-qt5.patch
+# Not sent upstream as it's read-only now.
+Patch2:         https://github.com/dwrobel/ldoce5viewer/commit/85690cc4bec3f0c9352d64a2150528724d679386.patch#/%{name}-Fixes-Ldoce5viewer-not-starting-after-sip-upgrade.patch
 
 BuildArch:      noarch
 
@@ -136,6 +138,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 
 
 %changelog
+* Tue Jan 07 2020 Damian Wrobel <dwrobel@ertelnet.rybnik.pl> - 0-10.20180309git377ff48
+- Fix for "Ldoce5viewer not starting after sip upgrade" (rfbz#5502).
+
 * Sat Aug 24 2019 Leigh Scott <leigh123linux@gmail.com> - 0-9.20180309git377ff48
 - Rebuild for python-3.8
 
