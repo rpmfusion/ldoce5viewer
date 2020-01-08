@@ -4,7 +4,7 @@
 
 Name:           ldoce5viewer
 Version:        0
-Release:        11.%{date}git%{shortcommit0}%{?dist}
+Release:        12.%{date}git%{shortcommit0}%{?dist}
 Summary:        Viewer Application for the Longman Dictionary (LDOCE 5)
 License:        GPLv3+ and Public Domain
 URL:            https://forward-backward.co.jp/ldoce5viewer/
@@ -17,6 +17,9 @@ Patch0:         https://patch-diff.githubusercontent.com/raw/ciscorn/ldoce5viewe
 Patch1:         https://patch-diff.githubusercontent.com/raw/ciscorn/ldoce5viewer/pull/69.patch#/%{name}-port-to-qt5.patch
 # Not sent upstream as it's read-only now.
 Patch2:         https://github.com/dwrobel/ldoce5viewer/commit/85690cc4bec3f0c9352d64a2150528724d679386.patch#/%{name}-Fixes-Ldoce5viewer-not-starting-after-sip-upgrade.patch
+# Adopt to use new inkscape (>=1.0) (use -o instead of -o option)
+# Not sent upstream as it's read-only now.
+Patch3:         https://github.com/dwrobel/ldoce5viewer/commit/e17a19a86c5f7a02c6005fe0ebe2e608226fe694.patch#/%{name}-Fix-for-new-inkscape-and-python3.patch
 
 BuildArch:      noarch
 
@@ -138,6 +141,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 
 
 %changelog
+* Wed Jan 08 2020 Damian Wrobel <dwrobel@ertelnet.rybnik.pl> - 0-12.20180309git377ff48
+- Adopt to use new inkscape (>=1.0)
+
 * Tue Jan 07 2020 Damian Wrobel <dwrobel@ertelnet.rybnik.pl> - 0-11.20180309git377ff48
 - Add missing patch
 
