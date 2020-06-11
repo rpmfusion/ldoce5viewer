@@ -4,7 +4,7 @@
 
 Name:           ldoce5viewer
 Version:        0
-Release:        14.%{date}git%{shortcommit0}%{?dist}
+Release:        15.%{date}git%{shortcommit0}%{?dist}
 Summary:        Viewer Application for the Longman Dictionary (LDOCE 5)
 License:        GPLv3+ and Public Domain
 URL:            https://forward-backward.co.jp/ldoce5viewer/
@@ -20,6 +20,9 @@ Patch2:         https://github.com/dwrobel/ldoce5viewer/commit/85690cc4bec3f0c93
 # Adopt to use new inkscape (>=1.0) (use -o instead of -o option)
 # Not sent upstream as it's read-only now.
 Patch3:         https://github.com/dwrobel/ldoce5viewer/commit/e17a19a86c5f7a02c6005fe0ebe2e608226fe694.patch#/%{name}-Fix-for-new-inkscape-and-python3.patch
+# Inkscape 1.0.2 changed argument from --export-file= to --export-filename=
+# Not sent upstream as it's read-only now.
+Patch4:         https://github.com/dwrobel/ldoce5viewer/commit/6bb1cc5a3df2f72b590e9230346bc0fb7862c792.patch#/%{name}-0001-Adopt-to-new-inkscape-arguments.patch
 
 BuildArch:      noarch
 
@@ -141,6 +144,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 
 
 %changelog
+* Thu Jun 11 2020 Damian Wrobel <dwrobel@ertelnet.rybnik.pl> - 0-15.20180309git377ff48
+- Fix for inkscape 1.0.2 (rfbz#5673)
+
 * Sat May 30 2020 Leigh Scott <leigh123linux@gmail.com> - 0-14.20180309git377ff48
 - Rebuild for python-3.9
 
