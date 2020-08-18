@@ -4,7 +4,7 @@
 
 Name:           ldoce5viewer
 Version:        0
-Release:        15.%{date}git%{shortcommit0}%{?dist}
+Release:        16.%{date}git%{shortcommit0}%{?dist}
 Summary:        Viewer Application for the Longman Dictionary (LDOCE 5)
 License:        GPLv3+ and Public Domain
 URL:            https://forward-backward.co.jp/ldoce5viewer/
@@ -144,6 +144,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 
 
 %changelog
+* Tue Aug 18 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0-16.20180309git377ff48
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
+
 * Thu Jun 11 2020 Damian Wrobel <dwrobel@ertelnet.rybnik.pl> - 0-15.20180309git377ff48
 - Fix for inkscape 1.0.2 (rfbz#5673)
 
