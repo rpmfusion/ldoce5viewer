@@ -23,6 +23,7 @@ Patch3:         https://github.com/dwrobel/ldoce5viewer/commit/e17a19a86c5f7a02c
 # Inkscape 1.0.2 changed argument from --export-file= to --export-filename=
 # Not sent upstream as it's read-only now.
 Patch4:         https://github.com/dwrobel/ldoce5viewer/commit/6bb1cc5a3df2f72b590e9230346bc0fb7862c792.patch#/%{name}-0001-Adopt-to-new-inkscape-arguments.patch
+Patch5:         temporary_python312_fix.patch
 
 BuildArch:      noarch
 
