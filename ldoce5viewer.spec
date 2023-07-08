@@ -30,6 +30,7 @@ BuildArch:      noarch
 BuildRequires:  /usr/bin/git
 BuildRequires:  desktop-file-utils
 BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
 BuildRequires:  python3dist(whoosh)
 BuildRequires:  python3dist(lxml)
 BuildRequires:  python3-qt5-devel
