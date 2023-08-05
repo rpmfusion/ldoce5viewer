@@ -4,7 +4,7 @@
 
 Name:           ldoce5viewer
 Version:        0
-Release:        24.%{date}git%{shortcommit0}%{?dist}
+Release:        25.%{date}git%{shortcommit0}%{?dist}
 Summary:        Viewer Application for the Longman Dictionary (LDOCE 5)
 License:        GPLv3+ and Public Domain
 URL:            https://forward-backward.co.jp/ldoce5viewer/
@@ -23,7 +23,6 @@ Patch3:         https://github.com/dwrobel/ldoce5viewer/commit/e17a19a86c5f7a02c
 # Inkscape 1.0.2 changed argument from --export-file= to --export-filename=
 # Not sent upstream as it's read-only now.
 Patch4:         https://github.com/dwrobel/ldoce5viewer/commit/6bb1cc5a3df2f72b590e9230346bc0fb7862c792.patch#/%{name}-0001-Adopt-to-new-inkscape-arguments.patch
-Patch5:         temporary_python312_fix.patch
 
 BuildArch:      noarch
 
@@ -146,6 +145,9 @@ appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/*.appdata
 
 
 %changelog
+* Sat Aug 05 2023 Leigh Scott <leigh123linux@gmail.com> - 0-25.20180309git377ff48
+- Drop patch
+
 * Wed Aug 02 2023 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0-24.20180309git377ff48
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
 
